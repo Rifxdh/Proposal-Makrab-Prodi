@@ -1,0 +1,516 @@
+/* General Reset */
+* {
+    text-decoration: none;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8f8f8;
+}
+
+div {
+    display: flex;
+    gap: 5px;
+}
+
+/* Header Styles */
+header {
+    top: 0;
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 1vh;
+    background-color: #f8f8f8;
+    display: flex;
+    align-items: center;
+    background-image: url(wdaw.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    box-shadow: 2px 2px 4px 3px rgba(102, 97, 97, 0.5);
+}
+
+header img {
+    width: 65px;
+    height: 65px;
+    border-radius: 100px;
+    box-shadow: 2px 2px 4px rgba(102, 97, 97, 0.5);
+}
+
+.header {
+    padding: 0.5rem 1.5rem;
+    gap: 1rem;
+    display: block;
+}
+
+.header p {
+    font-size: 15px;
+}
+
+#h6 {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* Navigation Styles */
+nav {
+    width: 25%;
+    height: 65vh;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    
+}
+
+.nav-menu ul {
+    list-style-type: none;
+}
+
+.nav-menu button {
+    margin-bottom: 1.5rem;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    background: none;
+    position: relative; /* Untuk posisi relatif */
+    padding: 0.5rem 0; /* Tambahkan padding untuk memberi ruang pada garis */
+}
+
+.nav-menu button:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0; /* Posisi garis di bawah tombol */
+    height: 2px; /* Ketebalan garis */
+    background-color: #007BFF; /* Warna garis */
+    width: 100%; /* Lebar garis */
+    transform: scaleX(0); /* Mulai dari skala 0 (tidak terlihat) */
+    transform-origin: left; /* Garis akan tumbuh dari sisi kiri */
+    transition: transform 0.3s ease; /* Transisi halus */
+}
+
+.nav-menu button:hover:after {
+    transform: scaleX(1); /* Skala garis ke 1 saat di-hover */
+}
+
+.nav-menu button:hover {
+    color: #1C1917;
+    text-shadow: 2px 2px 4px rgba(102, 97, 97, 0.5);
+}
+
+/* Section Styles */
+section {
+    width: 50%;
+    height: 65vh;
+    padding: 2rem;
+    overflow-y: auto;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.wadah {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 3rem;
+}
+
+.form-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #007BFF; /* Underline for emphasis */
+}
+
+.list-title {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #007BFF; /* Underline for emphasis */
+}
+
+.proposal-form {
+    border: 1px solid #ccc; /* Border around the form */
+    padding: 1.5rem;
+    border-radius: 5px; /* Rounded corners */
+    background-color: #fff; /* White background for the form */
+    width: 100%; /* Full width */
+}
+
+label {
+    display: block;
+    margin: 0.5rem 0 0.2rem; /* Spacing for labels */
+}
+
+input[type="text"],
+input[type="date"],
+textarea,
+input[type="file"] {
+    width: 100%; /* Full width for inputs */
+    padding: 0.5rem;
+    margin-bottom: 1rem; /* Space below inputs */
+    border: 1px solid #ccc; /* Border for inputs */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.submit-button {
+    background-color: #007BFF; /* Button color */
+    color: white; /* Text color */
+    padding: 0.5rem 1rem; /* Button padding */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.submit-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+
+
+.proposal-table {
+    width: 100%; /* Full width for the table */
+       border-collapse: collapse; /* Collapse borders */
+       margin-top: 1rem; /* Space above the table */
+   }
+   
+   .proposal-table th,
+   .proposal-table td {
+       border: 1px solid #ccc; /* Border for table cells */
+       padding: 0.5rem; /* Padding for table cells */
+       text-align: left; /* Align text to the left */
+   }
+   
+   .action-buttons {
+       display: flex;
+       flex-direction: column; /* Align buttons horizontally */
+       gap: 0.5rem; /* Space between buttons */
+   }
+   
+   .action-icon {
+       text-decoration: none;
+       color: #333;
+       padding: 0.5rem;
+       border: 1px solid #ccc; /* Optional: Add border for better visibility */
+       border-radius: 4px; /* Optional: Rounded corners */
+       text-align: center; /* Center text */
+       transition: background-color 0.3s, color 0.3s;
+   }
+   
+   .action-icon:hover {
+       background-color: #007BFF; /* Change background on hover */
+       color: white; /* Change text color on hover */
+   }
+   
+   
+   
+   .popup-trigger {
+       background-color: #007BFF; /* Button color */
+       color: white; /* Text color */
+       padding: 0.5rem 1rem; /* Button padding */
+       border: none; /* No border */
+       border-radius: 4px; /* Rounded corners */
+       cursor: pointer; /* Pointer cursor on hover */
+   }
+   
+   .popup-trigger:hover {
+       background-color: #0056b3; /* Darker shade on hover */
+   }
+
+
+
+   #popup-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7); /* Dark background for contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#popup-content {
+    background: #fff; /* White background for the popup */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px; /* Maximum width for the popup */
+    width: 90%; /* Full width on smaller screens */
+    height: auto; /* Allow height to adjust based on content */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+    position: relative; /* Position relative for close button */
+}
+
+#popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #007BFF; /* Match the theme color */
+}
+
+#popup-close:hover {
+    color: #0056b3; /* Darker shade on hover */
+}
+
+#popup-body {
+    margin-top: 20px; /* Space between close button and form */
+}
+
+#popup-body form {
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+}
+
+#popup-body label {
+    margin-bottom: 0.5rem; /* Space below labels */
+}
+
+#popup-body input[type="text"],
+#popup-body input[type="file"],
+#popup-body select,
+#popup-body textarea {
+    padding: 0.5rem;
+    margin-bottom: 1rem; /* Space below inputs */
+    border: 1px solid #ccc; /* Border for inputs */
+    border-radius: 4px; /* Rounded corners */
+}
+
+#popup-body button[type="submit"] {
+    background-color: #007BFF; /* Button color */
+    color: white; /* Text color */
+    padding: 0.5rem; /* Button padding */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+#popup-body button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+#popup-body textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 100px; /* Minimum height for textarea */
+}
+
+/* Pop-up styling */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-table {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(0.8);
+    transition: transform 0.3s ease-in-out;
+}
+
+.popup-table.active {
+    transform: scale(1);
+}
+
+.popup-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+/* form */
+
+
+/* Aside Styles */
+aside {
+    width: 25%;
+    height: 65vh;
+    padding: 2rem 1rem;
+    box-shadow: 2px 4px 4px rgba(102, 97, 97, 0.5);
+}
+
+aside table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+aside td {
+    border: 1px solid #ddd;
+    padding: 0.8rem;
+    text-align: left;
+}
+
+aside th {
+    background-color: #f2f2f2;
+}
+
+/* Footer Styles */
+footer {
+    bottom: 0;
+    width: 100%;
+    height: 15vh;
+    color: #6B7280;
+    margin-top: 5px;
+    padding: 0.5rem 1.5rem;
+    border-top: 1px solid #6B7280;
+}
+
+.footer {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+.nama h3 {
+    font-size: 1rem;
+    color: #1C1917;
+}
+
+.cp p {
+    width: 100%;
+    font-size: 0.9rem;
+    margin-left: 85px;
+}
+
+.nama {
+    display: block;
+}
+
+.nama p {
+    margin-top: -1rem;
+}
+
+.social {
+    display: block;
+    font-size: 0.9rem;
+    padding: 0.3rem;
+}
+
+.social p {
+    color: #6B7280;
+    margin: 0.3rem 0rem;
+}
+
+#head {
+    text-align: center;
+    font-size: 23px;
+}
+
+#form {
+    background-color: #1C1917;
+}
+
+
+/* Media Queries */
+
+/* Tablet Landscape */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+    html {
+        font-size: 14px;
+    }
+
+    header {
+        height: fit-content;
+    }
+
+    .header {
+        padding: 1rem;
+    }
+
+    header img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    nav {
+        width: 25%;
+        height: 50vh;
+    }
+
+    section {
+        padding: 1rem 6rem;
+    }
+
+    .wadah h1 {
+        padding: 5rem 3rem;
+    }
+
+    .card {
+        width: 50vw;
+        height: 45vh;
+    }
+
+    footer {
+        height: fit-content;
+        font-size: 10px;
+    }
+}
+
+/* Tablet Portrait */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    nav {
+        width: 100%;
+        height: fit-content;
+    }
+
+    .nav-menu {
+        flex-direction: row;
+    }
+
+    .card {
+        width: 80vw;
+        height: 45vh;
+    }
+
+    footer {
+        font-size: 10px;
+    }
+}
+
+/* Mobile */
+@media only screen and (max-width: 600px) {
+    nav {
+        width: 100%;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 80vw;
+        height: 45vh;
+    }
+
+    footer {
+        font-size: 10px;
+    }
+}
