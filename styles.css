@@ -95,6 +95,7 @@ nav {
 
 .nav-menu button:hover {
     color: #1C1917;
+    background:none;
     text-shadow: 2px 2px 4px rgba(102, 97, 97, 0.5);
 }
 
@@ -164,7 +165,6 @@ input[type="file"] {
 .submit-button:hover {
     background-color: #0056b3; /* Darker shade on hover */
 }
-
 
 
 .proposal-table {
@@ -427,17 +427,142 @@ footer {
 /* Media Queries */
 
 /* Tablet Landscape */
-@media only screen and (min-width: 769px) and (max-width: 992px) {
+/* Tablet Landscape (768px to 991px) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
     html {
         font-size: 14px;
     }
 
     header {
-        height: fit-content;
+        height: auto;
+    }
+
+    header img {
+        width: 50px;
+        height: 50px;
     }
 
     .header {
+        padding: 0.8rem;
+    }
+
+    nav {
+        width: 30%;
+        height: 55vh;
+    }
+
+    section {
+        width: 70%;
+        height: 55vh;
         padding: 1rem;
+    }
+
+    aside {
+        width: 100%;
+        height: auto;
+        margin-top: 1rem;
+    }
+
+    .wadah {
+        padding: 1rem;
+    }
+
+    .proposal-form {
+        padding: 1rem;
+    }
+
+    footer {
+        height: auto;
+        padding: 1rem;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .cp p {
+        margin-left: 0;
+    }
+}
+
+/* Tablet Portrait (576px to 767px) */
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    html {
+        font-size: 13px;
+    }
+
+    header img {
+        width: 45px;
+        height: 45px;
+    }
+
+    nav {
+        width: 100%;
+        height: auto;
+    }
+
+    .nav-menu {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .nav-menu ul {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    .nav-menu button {
+        margin-bottom: 0;
+        padding: 0.3rem 0.5rem;
+    }
+
+    section {
+        width: 100%;
+        height: auto;
+        min-height: 50vh;
+        padding: 1rem;
+    }
+
+    aside {
+        width: 100%;
+        height: auto;
+        margin-top: 1rem;
+    }
+
+    .wadah {
+        padding: 0.5rem;
+    }
+
+    footer {
+        height: auto;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.8rem;
+    }
+
+    .cp p {
+        margin-left: 0;
+    }
+
+    .social {
+        text-align: center;
+    }
+}
+
+/* Mobile (575px and below) */
+@media screen and (max-width: 575px) {
+    html {
+        font-size: 12px;
+    }
+
+    header {
+        padding: 0.5rem;
     }
 
     header img {
@@ -445,72 +570,84 @@ footer {
         height: 40px;
     }
 
-    .menu {
-        flex-direction: row;
-        flex-wrap: wrap;
+    .header {
+        padding: 0.5rem;
     }
 
     nav {
-        width: 25%;
-        height: 50vh;
+        width: 100%;
+        height: auto;
+    }
+
+    .nav-menu {
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    .nav-menu ul {
+        padding: 0;
+    }
+
+    .nav-menu button {
+        margin-bottom: 0.8rem;
+        width: 100%;
+        text-align: left;
     }
 
     section {
-        padding: 1rem 6rem;
+        width: 100%;
+        height: auto;
+        min-height: 45vh;
+        padding: 0.8rem;
     }
 
-    .wadah h1 {
-        padding: 5rem 3rem;
+    aside {
+        width: 100%;
+        height: auto;
+        padding: 1rem 0.5rem;
+        margin-top: 1rem;
     }
 
-    .card {
-        width: 50vw;
-        height: 45vh;
+    .wadah {
+        padding: 0.5rem;
+    }
+
+    .proposal-form {
+        padding: 1rem;
+    }
+
+    .proposal-table {
+        font-size: 0.9rem;
+    }
+
+    .proposal-table td, 
+    .proposal-table th {
+        padding: 0.3rem;
     }
 
     footer {
-        height: fit-content;
-        font-size: 10px;
-    }
-}
-
-/* Tablet Portrait */
-@media only screen and (min-width: 601px) and (max-width: 768px) {
-    nav {
-        width: 100%;
-        height: fit-content;
+        height: auto;
+        padding: 1rem 0.5rem;
     }
 
-    .nav-menu {
-        flex-direction: row;
-    }
-
-    .card {
-        width: 80vw;
-        height: 45vh;
-    }
-
-    footer {
-        font-size: 10px;
-    }
-}
-
-/* Mobile */
-@media only screen and (max-width: 600px) {
-    nav {
-        width: 100%;
-    }
-
-    .nav-menu {
+    .footer {
         flex-direction: column;
+        text-align: center;
+        gap: 0.8rem;
     }
 
-    .card {
-        width: 80vw;
-        height: 45vh;
+    .cp p {
+        margin-left: 0;
+        font-size: 0.8rem;
     }
 
-    footer {
-        font-size: 10px;
+    .social {
+        text-align: center;
+        padding: 0.2rem;
+    }
+
+    .action-buttons {
+        flex-direction: row;
+        justify-content: space-around;
     }
 }
